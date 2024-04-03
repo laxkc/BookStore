@@ -34,6 +34,24 @@ namespace BookStore
             Console.ResetColor();
         }
 
+        static void book_menu()
+    {
+        int c;
+    
+        Console.Write("\n\n");
+        Console.WriteLine("********************************************************");
+        Console.WriteLine("\t\t BOOKSTORE MENU");
+        Console.WriteLine("********************************************************\n");
+        Console.WriteLine("\t1. Add");
+        Console.WriteLine("\t2. Display");
+        Console.WriteLine("\t3. Buy Books");
+        Console.WriteLine("\t4. Go Back");
+        Console.WriteLine("\t5. Exit");
+        Console.Write("Enter your choice: ");
+        c = int.Parse(Console.ReadLine());
+   
+    }
+
 
         static void Main(string[] args)
         {
