@@ -77,7 +77,6 @@ static void display_book()
 
         static void Main(string[] args)
         {
-            Console.WriteLine("This is the book store application.");
             while (true)
             {
                 main_menu();

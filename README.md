@@ -15,6 +15,18 @@ This is a simple console-based bookstore application developed in C# using MySQL
 - MySQL Server
 - MySQL Connector for .NET
 
+## Installation
+1. Clone the repository:
+   git clone https://github.com/laxnax/BookStore.git
+
+## Usage
+- **Main Menu**: Upon running the application, you will be presented with a main menu where you can choose from various options like displaying top-rated books, adding new books, and more.
+- **Displaying Top-rated Books**: Select the option to display top-rated books to see a list of books sorted by their average customer ratings.
+- **Adding New Books**: Navigate to the book menu to add new books by providing the required details like title, author, etc.
+- **Displaying All Books**: You can view all the books available in the store by selecting the display option from the book menu.
+- **Buying Books**: The application allows you to 'buy' books by selecting from the list of available books.
+- **User Authentication**: User authentication is a work in progress. Currently, it prompts the user to enter an email and first name for authentication.
+
 ## Team Members
 - Member 1: Laxman KC
 - Member 2: Sarin Rana
