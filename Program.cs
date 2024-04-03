@@ -37,7 +37,7 @@ namespace BookStore
         static void book_menu()
     {
         int c;
-    
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.Write("\n\n");
         Console.WriteLine("********************************************************");
         Console.WriteLine("\t\t BOOKSTORE MENU");
@@ -49,7 +49,8 @@ namespace BookStore
         Console.WriteLine("\t5. Exit");
         Console.Write("Enter your choice: ");
         c = int.Parse(Console.ReadLine());
-   
+    
+        Console.ResetColor();
     }
 
 
