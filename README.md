@@ -10,6 +10,11 @@ This is a simple console-based bookstore application developed in C# using MySQL
 - Buy books by selecting from the available list.
 - Simple user authentication (work in progress).
 
+## Prerequisites
+- .NET Core SDK
+- MySQL Server
+- MySQL Connector for .NET
+
 ## Team Members
 - Member 1: Laxman KC
 - Member 2: Sarin Rana
