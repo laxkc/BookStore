@@ -5,7 +5,7 @@ namespace BookStore
 {
     public class BookStoreProgram
     {
-        static void main_menu()
+        static void main_menu(string connStr)
         {
             int c;
             Console.ForegroundColor = ConsoleColor.DarkBlue;
@@ -23,7 +23,11 @@ namespace BookStore
             c = int.Parse(Console.ReadLine());
             switch (c)
             {
-                
+             
+                case 2:
+                    Console.Clear();
+                    book_menu(connStr);
+                    break;
 
                 case 6:
                     System.Environment.Exit(1);
@@ -31,11 +35,12 @@ namespace BookStore
                 default:
                     Console.WriteLine("Wrong Input");
                     break;
+
             }
             Console.ResetColor();
         }
 
-        static void book_menu()
+        static void book_menu(string connStr)
     {
         int c;
         Console.ForegroundColor = ConsoleColor.Green;
@@ -58,7 +63,7 @@ namespace BookStore
                 break;
                case 4:
                 Console.Clear();
-                main_menu();
+                main_menu(connStr);
                 break;
             case 5:
                 System.Environment.Exit(1);
@@ -84,7 +89,7 @@ static void display_book()
 
             while (true)
             {
-                main_menu();
+                main_menu(connStr);
             }
         }
     }
