@@ -52,7 +52,12 @@ namespace BookStore
         switch (c)
         {
             case 2:
+                Console.Clear();
                 display_book();
+                break;
+               case 4:
+                Console.Clear();
+                main_menu();
                 break;
             case 5:
                 System.Environment.Exit(1);
