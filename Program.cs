@@ -51,6 +51,9 @@ namespace BookStore
         c = int.Parse(Console.ReadLine());
         switch (c)
         {
+            case 2:
+                display_book();
+                break;
             case 5:
                 System.Environment.Exit(1);
                 break;
