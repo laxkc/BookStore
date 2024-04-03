@@ -49,7 +49,15 @@ namespace BookStore
         Console.WriteLine("\t5. Exit");
         Console.Write("Enter your choice: ");
         c = int.Parse(Console.ReadLine());
-    
+        switch (c)
+        {
+            case 5:
+                System.Environment.Exit(1);
+                break;
+            default:
+                Console.WriteLine("Wrong Input");
+                break;
+        }
         Console.ResetColor();
     }
 
