@@ -77,6 +77,11 @@ static void display_book()
 
         static void Main(string[] args)
         {
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.Clear();
+            string connStr = "server=localhost;user=root;database=bookstore;port=3306;password=namxal";
+            MySqlConnection conn = new MySqlConnection(connStr);
+
             while (true)
             {
                 main_menu();
