@@ -9,3 +9,9 @@ This is a simple console-based bookstore application developed in C# using MySQL
 - Display all books available in the store.
 - Buy books by selecting from the available list.
 - Simple user authentication (work in progress).
+
+## Team Members
+- Member 1: Laxman KC
+- Member 2: Sarin Rana
+- Member 3: Bishesh Basnet
+- Member 4: Sachyut Shrestha
