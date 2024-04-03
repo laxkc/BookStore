@@ -61,6 +61,10 @@ namespace BookStore
         Console.ResetColor();
     }
 
+static void display_book()
+    {
+       Console.WriteLine("Displaying book");
+    }
 
         static void Main(string[] args)
         {
