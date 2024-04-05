@@ -136,6 +136,10 @@ namespace BookStore
                     Console.Clear();
                     display_book(connStr);
                     break;
+                case 3:
+                    Console.Clear();
+                    buy_book(connStr);
+                    break;
                 case 4:
                     Console.Clear();
                     main_menu(connStr);
@@ -148,6 +152,14 @@ namespace BookStore
                     break;
             }
             Console.ResetColor();
+        }
+        static void buy_book(string connStr){
+            bool userAuth = true;
+            if (userAuth){
+                Console.WriteLine("You can buy the books!");
+            } else {
+                Console.WriteLine("Please login first!");
+            }
         }
         static void user_auth(string connStr)
         {
