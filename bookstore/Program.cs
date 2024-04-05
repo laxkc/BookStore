@@ -165,6 +165,8 @@ namespace BookStore
             } else {
                 Console.WriteLine("Please login first!");
             }
+             Console.Write("\nEnter 1 to go back: ");
+             int input = int.Parse(Console.ReadLine());
         }
         static void user_auth(string connStr)
         {
