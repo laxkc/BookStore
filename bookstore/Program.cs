@@ -159,7 +159,7 @@ namespace BookStore
             Console.ResetColor();
         }
         static void buy_book(string connStr){
-            bool userAuth = true;
+            bool userAuth = false;
             if (userAuth){
                 Console.WriteLine("You can buy the books!");
             } else {
