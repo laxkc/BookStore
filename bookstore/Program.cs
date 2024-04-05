@@ -1,6 +1,5 @@
 ﻿using MySql.Data;
 using MySql.Data.MySqlClient;
-using System.Xml.Schema;
 
 
 namespace BookStore
@@ -33,7 +32,10 @@ namespace BookStore
                     Console.Clear();
                     book_menu(connStr);
                     break;
-
+                case 4:
+                    Console.Clear();
+                    search_book(connStr);
+                    break;
                 case 6:
                     System.Environment.Exit(1);
                     break;
@@ -42,6 +44,13 @@ namespace BookStore
                     break;
             }
             Console.ResetColor();
+        }
+
+        static void search_book(string connStr)
+        {
+            Console.WriteLine("Searching the books....\n");
+            Console.Write("Enter the book name you want to search: ");
+            string query = Console.ReadLine();
         }
 
         static void display_book(string connStr)
@@ -156,25 +165,23 @@ namespace BookStore
             }
         }
 
+        private static string MySqlLogin()
+        {
+            string server = "localhost";
+            string user = "root";
+            string database = "bookstore";
+            string port = "3306";
+            string password = "namxal";
+            return $"server={server};user={user};database={database};port={port};password={password}";
+        }
+
 
         public static void Main(string[] args)
         {
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Clear();
 
-            public string MySqlLogin()
-            {
-                server = "localhost";
-                user = "root";
-                database = "bookstore";
-                port = "3306";
-                password = "namxal";
-                string connectionString = String.Format($"server={0};user={1};database={2};port={3};password={4}", server, user, database, port, password);
-                return connectionString;
-            }
-            /*string connStr = "server=localhost;user=root;database=bookstore;port=3306;password=namxal";*/
             string connStr = MySqlLogin();
-            MySqlConnection conn = new MySqlConnection(connStr);
 
             while (true)
             {
