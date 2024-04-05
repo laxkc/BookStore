@@ -167,6 +167,14 @@ namespace BookStore
             }
              Console.Write("\nEnter 1 to go back: ");
              int input = int.Parse(Console.ReadLine());
+              if (input == 1)
+             {
+                 Console.Clear();
+                 book_menu(connStr);
+             } else
+             {
+                  Console.WriteLine("Wrong Input");
+                }
         }
         static void user_auth(string connStr)
         {
