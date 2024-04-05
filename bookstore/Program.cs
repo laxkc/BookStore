@@ -164,6 +164,7 @@ namespace BookStore
                 Console.WriteLine("You can buy the books!");
             } else {
                 Console.WriteLine("Please login first!");
+                user_auth(connStr);
             }
              Console.Write("\nEnter 1 to go back: ");
              int input = int.Parse(Console.ReadLine());
@@ -182,8 +183,9 @@ namespace BookStore
 
             Console.Write("\t Enter  your email: ");
             var email = Console.ReadLine();
-            Console.Write("\t Enter you email: ");
-            var firstName = Console.ReadLine();
+            Console.Write("\t Enter you name: ");
+            var Name = Console.ReadLine();
+            Console.WriteLine("Login succeed!");
 
         }
         static void top_rated_books(string connStr)
