@@ -31,7 +31,7 @@ namespace BookStore
                     Console.Clear();
                     book_menu(connStr);
                     break;
-                case 2:
+                case 3:
                     Console.Clear();
                     search_book(connStr);
                     break;
