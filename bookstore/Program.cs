@@ -1,5 +1,6 @@
-﻿
+﻿using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.Xml.Schema;
 
 
 namespace BookStore
@@ -155,11 +156,24 @@ namespace BookStore
             }
         }
 
+
         public static void Main(string[] args)
         {
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Clear();
-            string connStr = "server=localhost;user=root;database=bookstore;port=3306;password=namxal";
+
+            public string MySqlLogin()
+            {
+                server = "localhost";
+                user = "root";
+                database = "bookstore";
+                port = "3306";
+                password = "namxal";
+                string connectionString = String.Format($"server={0};user={1};database={2};port={3};password={4}", server, user, database, port, password);
+                return connectionString;
+            }
+            /*string connStr = "server=localhost;user=root;database=bookstore;port=3306;password=namxal";*/
+            string connStr = MySqlLogin();
             MySqlConnection conn = new MySqlConnection(connStr);
 
             while (true)
