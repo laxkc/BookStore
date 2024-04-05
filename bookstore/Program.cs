@@ -10,8 +10,7 @@ namespace BookStore
         {
             int c;
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.Write("\n\n");
-            Console.WriteLine("********************************************************");
+            Console.WriteLine("\n\n********************************************************");
             Console.WriteLine("\t  WELCOME TO THE BOOKSTORE SYSTEM");
             Console.WriteLine("********************************************************\n");
             Console.WriteLine("\t1. Top rated books list");
@@ -49,8 +48,45 @@ namespace BookStore
         static void search_book(string connStr)
         {
             Console.WriteLine("Searching the books....\n");
-            Console.Write("Enter the book name you want to search: ");
-            string query = Console.ReadLine();
+            Console.Write("Please enter a keyword to search for books (e.g., title or author name):");
+            string keyword = Console.ReadLine();
+
+            MySqlConnection conn = new MySqlConnection(connStr);
+            try
+            {
+                Console.WriteLine("\nSearch Results: \n");
+                conn.Open();
+                string searchQuery = @"SELECT Books.title, Authors.first_name, Authors.last_name, Publishers.name, Books.publication_date, Books.list_price 
+                                     FROM Books 
+                                     INNER JOIN Authors ON Books.author_id = Authors.author_id 
+                                     INNER JOIN Publishers ON Books.publisher_id = Publishers.publisher_id 
+                                     WHERE Books.title LIKE @keyword OR CONCAT(Authors.first_name, ' ', Authors.last_name) LIKE @keyword";
+
+                using var cmd = new MySqlCommand(searchQuery, conn);
+                cmd.Parameters.AddWithValue("@keyword", $"%{keyword}%");
+                using MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string title = reader["title"].ToString();
+                    string author = $"{reader["first_name"]} {reader["last_name"]}";
+                    string publisher = reader["name"].ToString();
+                    DateTime publicationDate = Convert.ToDateTime(reader["publication_date"]);
+                    decimal price = Convert.ToDecimal(reader["list_price"]);
+
+                    Console.WriteLine($"Title: {title}");
+                    Console.WriteLine($"Author: {author}");
+                    Console.WriteLine($"Publisher: {publisher}");
+                    Console.WriteLine($"Publication Date: {publicationDate.ToShortDateString()}");
+                    Console.WriteLine($"Price: {price}$");
+                    Console.WriteLine("-----------------------------------------");
+            }
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            book_menu(connStr);
         }
 
         static void display_book(string connStr)
