@@ -257,7 +257,7 @@ namespace BookStore
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("\n\n");
             Console.WriteLine("********************************************************");
-            Console.WriteLine("\t\t CUSTOMER MENU");
+            Console.WriteLine("\t\t AUTHOR MENU");
             Console.WriteLine("********************************************************\n");
             Console.WriteLine("\t1. Add new author");
             Console.WriteLine("\t2. Display all the author");
