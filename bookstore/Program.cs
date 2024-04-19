@@ -277,15 +277,15 @@ namespace BookStore
                     break;
                 case 2:
                     Console.Clear();
-                    UpdateAuthor(connStr);
+                    ListAuthors(connStr);
                     break;
                 case 3:
                     Console.Clear();
-                    DeleteAuthor(connStr);
+                    UpdateAuthor(connStr);
                     break;
                 case 4:
                     Console.Clear();
-                    ListAuthors(connStr);
+                    DeleteAuthor(connStr); 
                     break;
                 case 5:
                     Console.Clear();
