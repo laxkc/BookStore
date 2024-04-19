@@ -80,7 +80,7 @@ namespace BookStore
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("\n\n");
             Console.WriteLine("********************************************************");
-            Console.WriteLine("\t\t CUSTOMER MENU");
+            Console.WriteLine("\t\t ORDER MENU");
             Console.WriteLine("********************************************************\n");
             Console.WriteLine("\t1. Displaying the oders");
             Console.WriteLine("\t2. Place the order");
