@@ -88,7 +88,6 @@ namespace BookStore
             Console.WriteLine("\t4. Modifying the order status");
             Console.WriteLine("\t5. Go Back");
             Console.WriteLine("\t6. Exit");
-            Console.Write("Enter your choice: ");
             do
             {
                 Console.Write("\tEnter your choice: ");
