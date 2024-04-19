@@ -453,15 +453,15 @@ namespace BookStore
                     break;
                 case 2:
                     Console.Clear();
-                    UpdateCustomer(connStr);
+                    ListCustomers(connStr);
                     break;
                 case 3:
                     Console.Clear();
-                    DeleteCustomer(connStr);
+                    UpdateCustomer(connStr);
                     break;
                 case 4:
                     Console.Clear();
-                    ListCustomers(connStr);
+                    DeleteCustomer(connStr);              
                     break;
                 case 5:
                     Console.Clear();
