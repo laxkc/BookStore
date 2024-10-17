@@ -29,6 +29,12 @@ This is a simple console-based bookstore application developed in C# using MySQL
 - **Buying Books**: The application allows you to 'buy' books by selecting from the list of available books.
 - **User Authentication**: User authentication is a work in progress. Currently, it prompts the user to enter an email and first name for authentication.
 
+  
+
+![bookstoremysqldiagram](https://github.com/user-attachments/assets/521430e9-1248-4462-a84f-097115813584)
+
+
+
 ## Team Members
 - Member 1: Laxman KC
 - Member 2: Sarin Rana
